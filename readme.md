@@ -16,7 +16,7 @@ An app boilerplate using [vue-native](https://vue-native.io/), [vuex](https://vu
 
 Install project dependencies with npm or yarn:
 
-    $ npm
+    $ npm install
 or
 
     $ yarn
@@ -25,7 +25,7 @@ or
 ## Running the App
 
 
-    $ npm start
+    $ npm run start
 or
 
     $ yarn start
@@ -37,7 +37,7 @@ or
     $ npm run ios
 or
 
-    $ yarn run ios
+    $ yarn ios
 
 This works just like start, but also attempts to open your app in the iOS Simulator if you’re on a Mac and have it installed.
 
@@ -46,6 +46,6 @@ This works just like start, but also attempts to open your app in the iOS Simula
     $ npm run android
 or
 
-    $ yarn run android
+    $ yarn android
 
 This works just like start, but also attempts to open your app on a connected Android device or emulator. It requires an installation of Android build tools (see the React Native docs for detailed setup).
