@@ -1,17 +1,20 @@
 <template>
   <root>
-    <style-wrapper>
-      <app-navigation></app-navigation>
-    </style-wrapper>
+    <app-navigation :darkMode="theme"></app-navigation>
   </root>
 </template>
 
 <script>
 import { Root } from "native-base";
-import StyleWrapper from "./boot/styleProvider";
 import AppNavigation from "./routes";
 
 export default {
-  components: { Root, AppNavigation, StyleWrapper }
+  components: { Root, AppNavigation },
+  props: {
+    theme: {
+      type: Boolean,
+      required: true
+    }
+  }
 };
 </script>

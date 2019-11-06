@@ -1,5 +1,5 @@
 <template>
-  <setup></setup>
+  <setup :theme="$store.getters['app/darkMode']"></setup>
 </template>
 
 <script>

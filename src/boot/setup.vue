@@ -1,14 +1,17 @@
 <template>
-  <view class="container">
-    <app-loading v-if="!isAppReady"> </app-loading>
-    <app v-if="isAppReady"></app>
-  </view>
+  <style-wrapper :theme="theme">
+    <view class="container">
+      <app-loading v-if="!isAppReady"> </app-loading>
+      <app v-if="isAppReady" :theme="theme"></app>
+    </view>
+  </style-wrapper>
 </template>
 
 <script>
 import Vue from "vue-native-core";
 import * as env from "../../env.js";
 import store from "../store/store";
+import StyleWrapper from "../boot/styleProvider";
 
 import { VueNativeBase } from "native-base";
 import { AppLoading } from "expo";
@@ -22,7 +25,13 @@ Vue.prototype.$store = store;
 Vue.prototype.$env = env;
 
 export default {
-  components: { App, AppLoading },
+  components: { App, AppLoading, StyleWrapper },
+  props: {
+    theme: {
+      type: Boolean,
+      required: true
+    }
+  },
   data() {
     return {
       isAppReady: false

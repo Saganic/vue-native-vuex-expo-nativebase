@@ -2,7 +2,7 @@
   <nb-container>
     <header-component :navigation="this.props.navigation" title="About" />
     <nb-content>
-      <text>Test</text>
+      <nb-text>Test</nb-text>
     </nb-content>
   </nb-container>
 </template>

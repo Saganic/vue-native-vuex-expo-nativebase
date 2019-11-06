@@ -1,3 +1,5 @@
+import { Updates } from "expo";
+
 const getDefaultState = () => {
   return {
     app: {
@@ -31,6 +33,7 @@ const actions = {
   setDarkMode(context, val) {
     return new Promise(resolve => {
       context.commit("setDarkMode", val);
+      Updates.reload();
       resolve(val);
     });
   }

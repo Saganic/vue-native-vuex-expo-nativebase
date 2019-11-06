@@ -3,7 +3,7 @@ import {
   createStackNavigator,
   createDrawerNavigator
 } from "vue-native-router";
-import darkMode from "../../assets/native-base-theme/variables/darkMode";
+
 import HomeView from "../views/index";
 import AboutView from "../views/about";
 
@@ -18,20 +18,20 @@ const Drawer = createDrawerNavigator(
   },
   {
     initialRouteName: "Home",
-    drawerBackgroundColor: darkMode.containerBgColor,
+    drawerBackgroundColor: null,
     contentOptions: {
       itemsContainerStyle: {
         marginVertical: 0,
-        backgroundColor: darkMode.containerBgColor
+        backgroundColor: null
       },
       iconContainerStyle: {
         opacity: 1
       },
       labelStyle: {
-        color: darkMode.textColor
+        color: null
       },
       activeLabelStyle: {
-        color: darkMode.brandPrimary
+        color: null
       }
     }
   }
