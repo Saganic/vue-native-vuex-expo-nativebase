@@ -10,7 +10,7 @@ An app boilerplate using [vue-native](https://vue-native.io/), [vuex](https://vu
 
 ## Installation
 
-    $ git clone git@github.com:Saganic/vue-native-vuex-expo-nativebase.git
+    $ git clone https://github.com/Saganic/vue-native-vuex-expo-nativebase.git
     $ cd vue-native-vuex-expo-nativebase
 
 
