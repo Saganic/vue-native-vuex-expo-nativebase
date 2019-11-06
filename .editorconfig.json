@@ -1,0 +1,6 @@
+{
+    "rules": {
+        "editorconfig/editorconfig": "error"
+    },
+    "plugins": ["editorconfig"]
+}
