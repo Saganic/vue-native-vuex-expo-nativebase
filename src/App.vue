@@ -1,6 +1,6 @@
 <template>
   <root>
-    <app-navigation :darkMode="theme"></app-navigation>
+    <app-navigation></app-navigation>
   </root>
 </template>
 

@@ -1,7 +1,11 @@
 <template>
   <style-wrapper :theme="theme">
     <view class="container">
-      <app-loading v-if="!isAppReady"> </app-loading>
+      <app-loading
+        v-if="!isAppReady"
+        :startAsync="startLoading"
+        :onFinish="finishLoading"
+      />
       <app v-if="isAppReady" :theme="theme"></app>
     </view>
   </style-wrapper>
@@ -37,11 +41,16 @@ export default {
       isAppReady: false
     };
   },
-  created() {
-    this.loadFonts();
-  },
   methods: {
+    startLoading() {
+      console.log("App started loading");
+      this.loadFonts();
+    },
+    finishLoading() {
+      console.log("App finished loading");
+    },
     async loadFonts() {
+      console.log("Loading fonts");
       try {
         this.isAppReady = false;
         await Font.loadAsync({
@@ -51,7 +60,7 @@ export default {
         });
         this.isAppReady = true;
       } catch (error) {
-        console.log("some error occured", error);
+        console.log("Error occured loading fonts ", error);
         this.isAppReady = true;
       }
     }
